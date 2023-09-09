@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import org.h2.security.SHA256;
+
+
 @RestController
 public class GreetingController {
 
@@ -33,7 +36,11 @@ public class GreetingController {
 
 	private String getGreetingsFromFromServiceB() {
 		Greeting greeting = serviceBClient.getGreetingMessage();
-
+		String inputString = "s3cr37";
+		byte[] key         = inputString.getBytes();
+		
+		SHA256.getHMAC(key, message);
+		
 		return greeting != null ? greeting.getContent() + " - " + greeting.getId() : "Service B Not Available";
 	}
 
