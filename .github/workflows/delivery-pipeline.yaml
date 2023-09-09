@@ -2,7 +2,8 @@ name: SonarCloud
 on:
   push:
     branches:
-      - feature-ms-carlosLopez-pipelineDelivery
+      - main
+      - feature-*
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
