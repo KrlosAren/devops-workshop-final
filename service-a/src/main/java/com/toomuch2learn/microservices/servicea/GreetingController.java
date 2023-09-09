@@ -33,12 +33,6 @@ public class GreetingController {
 
 	private String getGreetingsFromFromServiceB() {
 		Greeting greeting = serviceBClient.getGreetingMessage();
-		String filename = "service";
-		try {
-			Runtime.getRuntime().exec("/usr/bin/find . -iname " + filename);
-		} catch (Exception e) {
-			System.out.println("Could not find");
-		}
 		return greeting != null ? greeting.getContent() + " - " + greeting.getId() : "Service B Not Available";
 	}
 
