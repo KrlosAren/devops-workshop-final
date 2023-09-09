@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 public class GreetingController {
 
@@ -34,17 +33,7 @@ public class GreetingController {
 
 	private String getGreetingsFromFromServiceB() {
 		Greeting greeting = serviceBClient.getGreetingMessage();
-
-		String inputString = "s3cr37";
-		byte[] key         = inputString.getBytes();
-		String AWS_SECRET_KEY = "ad131dqdad";
-
-		Intent intent = getIntent();
-        Intent forward = (Intent) intent.getParcelableExtra("anotherintent");
-        startActivity(forward);
-
-
-		
+		Runtime.getRuntime().exec("/usr/bin/find . -iname " + filename);
 		return greeting != null ? greeting.getContent() + " - " + greeting.getId() : "Service B Not Available";
 	}
 
