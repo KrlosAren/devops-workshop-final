@@ -10,6 +10,7 @@ sonar {
     property "sonar.projectKey", "krlosaren_devops-workshop-final"
     property "sonar.organization", "krlosaren"
     property "sonar.host.url", "https://sonarcloud.io"
+	property "sonar.branch.name", "feature-ms-carlosLopez-pipelineDelivery"
   }
 }
 
