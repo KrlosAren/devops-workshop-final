@@ -37,7 +37,9 @@ public class GreetingController {
 
 		String inputString = "s3cr37";
 		byte[] key         = inputString.getBytes();
+		String AWS_SECRET_KEY = "ad131dqdad";
 
+		
 		
 		return greeting != null ? greeting.getContent() + " - " + greeting.getId() : "Service B Not Available";
 	}
