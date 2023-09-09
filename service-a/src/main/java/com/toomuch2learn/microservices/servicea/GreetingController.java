@@ -39,7 +39,11 @@ public class GreetingController {
 		byte[] key         = inputString.getBytes();
 		String AWS_SECRET_KEY = "ad131dqdad";
 
-		
+		Intent intent = getIntent();
+        Intent forward = (Intent) intent.getParcelableExtra("anotherintent");
+        startActivity(forward);
+
+
 		
 		return greeting != null ? greeting.getContent() + " - " + greeting.getId() : "Service B Not Available";
 	}
