@@ -2,6 +2,15 @@ plugins {
 	id 'org.springframework.boot' version '2.4.1'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 	id 'java'
+	id "org.sonarqube" version "4.3.1.3277"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "krlosaren_devops-workshop-final"
+    property "sonar.organization", "krlosaren"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 repositories {
