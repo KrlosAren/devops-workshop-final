@@ -52,6 +52,12 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.openanzo.dependencies</groupId>
+			<artifactId>org.h2</artifactId>
+			<version>1.1.115</version>
+		</dependency>
+
 	</dependencies>
 
     	<dependencyManagement>
